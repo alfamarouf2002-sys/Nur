@@ -347,13 +347,7 @@
     }
 
     .bismillah-art {
-    position: absolute;
-    top: 5px;
-    left: 25%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: auto;
-    z-index: 10;
+      position: static;
       flex: 0 0 auto;
       width: clamp(64px, 10vw, 128px);
       aspect-ratio: 1;
@@ -363,13 +357,7 @@
       animation: calligraphy-lightning 3s ease-in-out infinite;
     }
     .bismillah-art1 {
-    position: absolute;
-    top: 5px;
-    left: 75%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: auto;
-    z-index: 10;
+      position: static;
       flex: 0 0 auto;
       width: clamp(64px, 10vw, 128px);
       aspect-ratio: 1;
@@ -1602,6 +1590,194 @@
 
       .modal-panel {
         padding: 28px 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 32px, 1200px);
+      }
+
+      .header-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px 12px;
+        height: auto;
+        padding-block: 8px;
+      }
+
+      .brand {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .brand-logo {
+        height: 58px;
+        max-width: min(76px, 20vw);
+      }
+
+      .header-actions {
+        display: contents;
+      }
+
+      .admin-nav-btn {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        padding: 8px 12px;
+      }
+
+      .admin-nav-btn .admin-badge {
+        display: none;
+      }
+
+      .header-actions > .cta-btn {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: center;
+        padding: 10px 18px !important;
+      }
+
+      .hero {
+        padding: 32px 0 24px;
+      }
+
+      .bismillah-row {
+        gap: 4px;
+        margin-bottom: 16px;
+      }
+
+      .bismillah-art,
+      .bismillah-art1 {
+        width: clamp(36px, 12vw, 56px);
+      }
+
+      .bismillah {
+        font-size: clamp(0.95rem, 4.5vw, 1.35rem);
+      }
+
+      .badge-pill {
+        max-width: 100%;
+        justify-content: center;
+        padding: 6px 12px;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+      }
+
+      .hero-guidance {
+        padding: 16px;
+      }
+
+      .hero-title {
+        font-size: clamp(1.9rem, 8vw, 2.5rem);
+        letter-spacing: 0.01em;
+      }
+
+      .hero-desc {
+        font-size: 0.98rem;
+        margin-bottom: 24px;
+      }
+
+      .hero-actions {
+        gap: 10px;
+        margin-bottom: 32px;
+      }
+
+      .pillars-strip {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+        margin-bottom: 40px;
+      }
+
+      .pillar-item {
+        padding: 10px;
+      }
+
+      .categories-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+
+      .category-card {
+        min-width: 0;
+        padding: 22px 18px;
+      }
+
+      .card-stats-row {
+        align-items: flex-start;
+      }
+
+      .filter-bar {
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      .filter-btn {
+        padding: 8px 12px;
+      }
+
+      .modal {
+        padding: 10px;
+      }
+
+      .philosophy-gate {
+        padding: 10px;
+      }
+
+      .philosophy-panel {
+        width: 100%;
+        max-height: calc(100vh - 20px);
+        max-height: calc(100dvh - 20px);
+        padding: 20px 16px;
+      }
+
+      .modal-panel,
+      .modal-panel-admin {
+        width: 100%;
+        max-height: calc(100vh - 20px);
+        max-height: calc(100dvh - 20px);
+        padding: 24px 16px;
+      }
+
+      .modal-panel h2 {
+        padding-right: 28px;
+      }
+
+      .modal-topics-box {
+        padding: 16px;
+      }
+
+      .admin-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .admin-nav-tabs {
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+      }
+
+      .admin-tab-btn {
+        flex: 0 0 auto;
+        padding: 8px 12px;
+      }
+
+      .form-control {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .toast {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        justify-content: center;
+      }
+
+      .site-footer {
+        padding: 36px 0 24px;
       }
     }
 
